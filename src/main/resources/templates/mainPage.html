@@ -6,9 +6,12 @@
 </head>
 <body>
     <section class="block">
-        <ol>
-            <li><a href="categoryPage.html" th:href="@{/categories}">Ссылка</a></li>
-        </ol>
+        <ul>
+            <li data-th-each="category : ${categories}">
+                <a data-th-href="@{/categories/{categoryId}(categoryId=${category.id})}"
+                   data-th-text="${category.name}"></a>
+            </li>
+        </ul>
     </section>
 </body>
 </html>
