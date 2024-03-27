@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Категории</title>
+</head>
+<body>
+    <ul>
+        <li data-th-each="category : ${categories}">
+            <a data-th-href="@{/categories/{categoryId}(categoryId=${category.id})}" data-th-text="${category.name}"></a>
+        </li>
+    </ul>
+</body>
+</html>
